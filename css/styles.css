@@ -98,6 +98,8 @@ body .card .creator {
 }
 body .card .creator .avatar {
   max-width: 2em;
+  border-radius: 50%;
+  border: 1px solid white;
 }
 body .card .creator .creator-credits {
   font-size: 0.8em;
