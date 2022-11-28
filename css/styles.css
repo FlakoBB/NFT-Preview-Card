@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(217deg, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+}
+body .card {
+  width: 18em;
+  background-color: hsl(216deg, 50%, 16%);
+  border-radius: 0.5em;
+  padding: 1em;
+}
+body .card .nft-preview {
+  max-width: 100%;
+  border-radius: 0.5em;
+  overflow: hidden;
+  position: relative;
+}
+body .card .nft-preview img {
+  max-width: 100%;
+  transform: scale(1.3);
+}
+body .card .nft-preview .viewin {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 255, 247, 0.4);
+}
+body .card .nft-preview:hover .viewin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+body .card .card-title {
+  width: fit-content;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: white;
+  margin: 0.8em 0;
+}
+body .card .card-title:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+body .card .card-desc {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 1em;
+  font-weight: 400;
+}
+body .card .details {
+  margin: 0.8em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+}
+body .card .details .price {
+  color: hsl(178deg, 100%, 50%);
+  font-size: 0.9em;
+  align-items: center;
+  display: flex;
+  gap: 0.3em;
+}
+body .card .details .time {
+  color: hsl(215deg, 51%, 70%);
+  font-size: 0.9em;
+  align-items: center;
+  display: flex;
+  gap: 0.3em;
+}
+body .card .separator {
+  min-width: 100%;
+  border: none;
+  border-top: 1px solid hsl(215deg, 32%, 27%);
+}
+body .card .creator {
+  margin-top: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.4em;
+}
+body .card .creator .avatar {
+  max-width: 2em;
+}
+body .card .creator .creator-credits {
+  font-size: 0.8em;
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+}
+body .card .creator .creator-credits .name-creator {
+  font-size: 1em;
+  color: white;
+}
+body .card .creator .creator-credits .name-creator:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+body .attribution {
+  font-size: 0.6em;
+  text-align: center;
+  color: hsl(215deg, 51%, 70%);
+}
+body .attribution a {
+  font-size: 1em;
+  color: white;
+}
+body .attribution a:hover {
+  color: hsl(178deg, 100%, 50%);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

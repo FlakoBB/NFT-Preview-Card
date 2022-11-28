@@ -1,0 +1,156 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$soft_blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+$main_bg: hsl(217, 54%, 11%);
+$card_bg: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+
+@mixin hover_cian {
+    &:hover {
+        color: $cyan;
+        cursor: pointer;
+    }
+}
+
+@mixin details_flex {
+    font-size: .9em;
+    align-items: center;
+    display: flex;
+    gap: .3em;
+}
+
+* {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: $main_bg;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6em;
+
+    .card {
+        width: 18em;
+        background-color: $card_bg;
+        border-radius: .5em;
+        padding: 1em;
+
+        .nft-preview {
+            max-width: 100%;
+            border-radius: .5em;
+            overflow: hidden;
+            position: relative;
+
+
+            img {
+                max-width: 100%;
+                transform: scale(1.3);
+            }
+
+            .viewin {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: none;
+                background-color: color.change($cyan, $alpha: .4);
+            }
+
+            &:hover .viewin {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+
+        .card-title {
+            width: fit-content;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: white;
+            margin: .8em 0;
+
+            @include hover_cian();
+        }
+
+        .card-desc {
+            color: $soft_blue;
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        .details {
+            margin: .8em 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 300;
+            
+
+            .price {
+                color: $cyan;
+                @include details_flex();
+            }
+
+            .time {
+                color: $soft_blue;
+                @include details_flex();
+            }
+        }
+
+        .separator {
+            min-width: 100%;
+            border: none;
+            border-top: 1px solid $line;
+        }
+
+        .creator {
+            margin-top: .8em;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: .4em;
+
+            .avatar {
+                max-width: 2em;
+            }
+
+            .creator-credits {
+                font-size: .8em;
+                color: $soft_blue;
+                font-weight: 300;
+
+                .name-creator {
+                    font-size: 1em;
+                    color: white;
+
+                    @include hover_cian();
+                }
+            }
+        }
+    }
+
+    .attribution {
+        font-size: .6em;
+        text-align: center;
+        color: $soft_blue;
+    
+        a {
+            font-size: 1em;
+            color: white;
+
+            @include hover_cian();
+        }
+    }
+}
